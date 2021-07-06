@@ -32,28 +32,28 @@
         <elementListCompartment Id="b2b6833b-3b2c-4ede-ba44-526ddebc4533" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 4.84699625651042); (3.5 : 4.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 4.84699625651042); (3.5 : 4.84699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/dbDiDongStoreDataContext/Account/Account_Bill" />
       <nodes>
         <classShapeMoniker Id="ef9b9fbd-fc60-4a59-a881-a6f5b5ed5c3e" />
         <classShapeMoniker Id="a93a7a0b-6e19-4617-b7f9-1957975a4cc1" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 4.84699625651042); (7.25 : 4.84699625651042); (7.25 : 2.70359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 4.84699625651042); (7.25 : 4.84699625651042); (7.25 : 2.70359537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/dbDiDongStoreDataContext/Bill/Bill_DetailBill" />
       <nodes>
         <classShapeMoniker Id="a93a7a0b-6e19-4617-b7f9-1957975a4cc1" />
         <classShapeMoniker Id="87dfa75e-91c1-43d5-acbe-fa0c524d6258" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 1.91429768880208); (6.25 : 1.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 1.91429768880208); (6.25 : 1.91429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/dbDiDongStoreDataContext/Phone/Phone_DetailBill" />
       <nodes>
         <classShapeMoniker Id="0dd92877-2e66-467b-811d-be23ce2a1c91" />
         <classShapeMoniker Id="87dfa75e-91c1-43d5-acbe-fa0c524d6258" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 1.84699625651042); (3.5 : 1.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 1.84699625651042); (3.5 : 1.84699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/dbDiDongStoreDataContext/Company/Company_Phone" />
       <nodes>
         <classShapeMoniker Id="2b53c26e-2833-45ed-85fd-e6a7883f7974" />

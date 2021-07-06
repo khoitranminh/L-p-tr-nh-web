@@ -12,10 +12,10 @@ namespace DiDongStore.Controllers
         // Tao 1 doi tuong chua toan bo CSDL tu dbDiDongStore
         dbDiDongStoreDataContext data = new dbDiDongStoreDataContext();
 
-        private List<Phone> Laydienthoaimoi(int count)
+        private List<DIENTHOAI> Laydienthoaimoi(int count)
         {
             // sap xep giam dan theo ID, lay count dong dau
-            return data.Phones.OrderByDescending(a => a.ID).Take(count).ToList();
+            return data.DIENTHOAIs.OrderByDescending(a => a.MaDienThoai).Take(count).ToList();
         }
 
         // GET: DiDongStore
@@ -26,17 +26,17 @@ namespace DiDongStore.Controllers
         }
         public ActionResult Hang()
         {
-            var hang = from h in data.Companies select h;
+            var hang = from h in data.HANGs select h;
             return PartialView(hang);
         }
         public ActionResult SPTheoHang(int id)
         {
-            var phone = from p in data.Phones where p.ID == id select p;
+            var phone = from p in data.DIENTHOAIs where p.MaHang == id select p;
             return View(phone);
         }
         public ActionResult Chitietphone(int id)
         {
-            var phone = from p in data.Phones where p.ID == id select p;
+            var phone = from p in data.DIENTHOAIs where p.MaDienThoai == id select p;
             return View(phone.Single());
         }
 

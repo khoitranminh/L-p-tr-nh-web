@@ -23,20 +23,19 @@
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
-
-<h3> THÔNG TIN CHI TIẾT Di Động</h3>
+<h3> THÔNG TIN CHI TIẾT SÁCH</h3>
 <div>
     <div style="width:40%; float:left; border-left: dotted 1px; border-color:azure">
-        <img src="~/images/@Model.Images" width="100%" />
+        <img src="~/images/@Model.AnhBia" width="100%" />
     </div>
     <div style="width:60%; float:left; padding:10px">
-        <h4 style="font-weight:bold; color:red">Tên Di Động: @Model.Name </h4>
-        <p style="text-align:justify"><Span style="font-weight:bold"> Mô tả: </Span>@Model.Describe </p>
-        <p style="font-weight:bold"> Giá bán: <span style="color:red; font-size:16pt "> @String.Format("{0:0,0}", Model.Price) VNĐ </span></p>
+        <h4 style="font-weight:bold; color:red">Tên sách: @Model.TenDienThoai </h4>
+        <p style="text-align:justify"><Span style="font-weight:bold"> Mô tả: </Span>@Model.Mota </p>
+        <p style="font-weight:bold"> Giá bán: <span style="color:red; font-size:16pt "> @String.Format("{0:0,0}", Model.GiaBan) VNĐ </span></p>
     </div>
     <div>
         <div id="Datmua">
-            <a href="@Url.Action("ThemGiohang", "GioHang", new { @iID= @Model.ID, @strURL=Request.Url.ToString() })" class="list-group-item">
+            <a href="@Url.Action("ThemGiohang", "GioHang", new { @iMaDienThoai= @Model.MaDienThoai, @strURL=Request.Url.ToString() })" class="list-group-item">
                 ĐẶT MUA
             </a>
         </div>

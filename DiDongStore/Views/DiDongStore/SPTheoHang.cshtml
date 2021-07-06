@@ -9,13 +9,13 @@
 {
     <div class="col-sm-4 col-lg-4 col-md-4">
         <div class="thumbnail">
-            <a href="@Url.Action("Chitietphone", "DiDongStore", new { id = item.ID })">
-                <img src="~/images/@item.Images" alt="@item.Name" width="100">
+            <a href="@Url.Action("Chitietphone", "DiDongStore", new { id = item.MaDienThoai })">
+                <img src="~/images/@item.AnhBia" alt="@item.TenDienThoai" width="100">
                 <div class="caption">
                     <h4>
-                        <a href="#">@item.Name</a>
+                        <a href="#">@item.TenDienThoai</a>
                     </h4>
-                    <h4 class="pull-right">@item.Price</h4>
+                    <h4 class="pull-right">@item.GiaBan</h4>
                 </div>
             </a>
             <div class="ratings">

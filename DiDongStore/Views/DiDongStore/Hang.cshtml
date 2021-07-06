@@ -1,8 +1,8 @@
-﻿@model IEnumerable<DiDongStore.Models.Company>
+﻿@model IEnumerable<DiDongStore.Models.HANG>
 <div class="list-group">
     @foreach (var item in Model)
     {
-        <a href="@Url.Action("SPTheoHang","DiDongStore",new { id = item.ID})" class="list-group-item"> @item.Name</a>
+        <a href="@Url.Action("SPTheoHang","DiDongStore",new { id = item.MaHang})" class="list-group-item"> @item.TenHang</a>
 
     }
 </div>

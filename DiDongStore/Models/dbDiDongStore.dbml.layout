@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dbDiDongStore">
+  <DataContextMoniker Name="/dbDiDongStoreDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ef9b9fbd-fc60-4a59-a881-a6f5b5ed5c3e" absoluteBounds="0.75, 4, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/dbDiDongStoreDataContext/Account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f9bb6c31-9e9a-4420-840c-8dba7b6d93b9" absoluteBounds="0.765, 4.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a93a7a0b-6e19-4617-b7f9-1957975a4cc1" absoluteBounds="3.5, 4.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/dbDiDongStoreDataContext/Bill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9b7e2762-fb93-4c19-8fd2-d56cd86b8a46" absoluteBounds="3.515, 4.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2b53c26e-2833-45ed-85fd-e6a7883f7974" absoluteBounds="0.75, 1.25, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/dbDiDongStoreDataContext/Company" />
+      <nestedChildShapes>
+        <elementListCompartment Id="661db25a-7b78-443c-95fe-109d36ceff69" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="87dfa75e-91c1-43d5-acbe-fa0c524d6258" absoluteBounds="6.25, 1.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbDiDongStoreDataContext/DetailBill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3d710c9b-102e-412e-9fff-10064c2ac210" absoluteBounds="6.265, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0dd92877-2e66-467b-811d-be23ce2a1c91" absoluteBounds="3.5, 0.875, 2, 1.9631982421874998">
+      <DataClassMoniker Name="/dbDiDongStoreDataContext/Phone" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2b6833b-3b2c-4ede-ba44-526ddebc4533" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 4.84699625651042); (3.5 : 4.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbDiDongStoreDataContext/Account/Account_Bill" />
+      <nodes>
+        <classShapeMoniker Id="ef9b9fbd-fc60-4a59-a881-a6f5b5ed5c3e" />
+        <classShapeMoniker Id="a93a7a0b-6e19-4617-b7f9-1957975a4cc1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.84699625651042); (7.25 : 4.84699625651042); (7.25 : 2.70359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbDiDongStoreDataContext/Bill/Bill_DetailBill" />
+      <nodes>
+        <classShapeMoniker Id="a93a7a0b-6e19-4617-b7f9-1957975a4cc1" />
+        <classShapeMoniker Id="87dfa75e-91c1-43d5-acbe-fa0c524d6258" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.91429768880208); (6.25 : 1.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbDiDongStoreDataContext/Phone/Phone_DetailBill" />
+      <nodes>
+        <classShapeMoniker Id="0dd92877-2e66-467b-811d-be23ce2a1c91" />
+        <classShapeMoniker Id="87dfa75e-91c1-43d5-acbe-fa0c524d6258" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.84699625651042); (3.5 : 1.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbDiDongStoreDataContext/Company/Company_Phone" />
+      <nodes>
+        <classShapeMoniker Id="2b53c26e-2833-45ed-85fd-e6a7883f7974" />
+        <classShapeMoniker Id="0dd92877-2e66-467b-811d-be23ce2a1c91" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,8 @@
+﻿@model IEnumerable<DiDongStore.Models.Company>
+<div class="list-group">
+    @foreach (var item in Model)
+    {
+        <a href="@Url.Action("SPTheoHang","DiDongStore",new { id = item.ID})" class="list-group-item"> @item.Name</a>
+
+    }
+</div>

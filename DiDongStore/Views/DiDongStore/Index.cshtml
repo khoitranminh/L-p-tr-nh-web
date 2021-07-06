@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+     @foreach (var item in Model)
+                {
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <a href="@Url.Action("Chitietphone", "DiDongStore", new { id = item.ID }) ">
+                                <img alt=" @item.Name" src="~/images/@item.Images" />
+                                <div class="caption">
+                                    <h4 class="pull-right">@item.Price</h4>
+                                    <h4>
+                                        <a hr="#">@item.Name</a>
+                                    </h4>
+                                    <h4>@item.Describe</h4>
+                                </div>
+
+                            </a>
+                        </div>
+                    
+                    </div>
+                }
+           
+
+
+
+
+<!-- /.container -->
+
+

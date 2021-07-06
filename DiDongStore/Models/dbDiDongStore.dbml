@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DiDongStore" Class="dbDiDongStoreDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DANHNT10297\SQLEXPRESS;Initial Catalog=DiDongStore;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DiDongStoreConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Account" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="PassWord" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Association Name="Account_Bill" Member="Bills" ThisKey="UserName" OtherKey="UserName" Type="Bill" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bill" Member="Bills">
+    <Type Name="Bill">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Bill_DetailBill" Member="DetailBills" ThisKey="ID" OtherKey="IDBill" Type="DetailBill" />
+      <Association Name="Account_Bill" Member="Account" ThisKey="UserName" OtherKey="UserName" Type="Account" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Company" Member="Companies">
+    <Type Name="Company">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Company_Phone" Member="Phones" ThisKey="ID" OtherKey="CompanyID" Type="Phone" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DetailBill" Member="DetailBills">
+    <Type Name="DetailBill">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDBill" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDPhone" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Bill_DetailBill" Member="Bill" ThisKey="IDBill" OtherKey="ID" Type="Bill" IsForeignKey="true" />
+      <Association Name="Phone_DetailBill" Member="Phone" ThisKey="IDPhone" OtherKey="ID" Type="Phone" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Phone" Member="Phones">
+    <Type Name="Phone">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Images" Type="System.String" DbType="Char(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Describe" Type="System.String" DbType="Char(300) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Phone_DetailBill" Member="DetailBills" ThisKey="ID" OtherKey="IDPhone" Type="DetailBill" />
+      <Association Name="Company_Phone" Member="Company" ThisKey="CompanyID" OtherKey="ID" Type="Company" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
